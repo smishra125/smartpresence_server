@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_gateway/cmake_gcc
+# Install script for directory: C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_server/cmake_gcc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/smartpresence_gateway")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/smartpresence_server")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_gateway/cmake_gcc/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_server/cmake_gcc/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

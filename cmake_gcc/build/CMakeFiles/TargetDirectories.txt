@@ -1,4 +1,4 @@
-C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_gateway/cmake_gcc/build/CMakeFiles/slc.dir
-C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_gateway/cmake_gcc/build/CMakeFiles/smartpresence_gateway.dir
-C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_gateway/cmake_gcc/build/CMakeFiles/edit_cache.dir
-C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_gateway/cmake_gcc/build/CMakeFiles/rebuild_cache.dir
+C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_server/cmake_gcc/build/CMakeFiles/slc.dir
+C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_server/cmake_gcc/build/CMakeFiles/smartpresence_server.dir
+C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_server/cmake_gcc/build/CMakeFiles/edit_cache.dir
+C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_server/cmake_gcc/build/CMakeFiles/rebuild_cache.dir

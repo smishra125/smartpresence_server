@@ -8,7 +8,7 @@
     "configurePresets": [
       {
         "name": "project",
-        "displayName": "Configure smartpresence_gateway",
+        "displayName": "Configure smartpresence_server",
         "generator": "Ninja Multi-Config",
         "binaryDir": "${sourceDir}/build",
         "toolchainFile": "${sourceDir}/toolchain.cmake",
@@ -20,10 +20,10 @@
     "buildPresets": [
       {
         "name": "default_config",
-        "displayName": "Build smartpresence_gateway",
+        "displayName": "Build smartpresence_server",
         "configurePreset": "project",
         "configuration": "base",
-        "targets": ["smartpresence_gateway"]
+        "targets": ["smartpresence_server"]
       }
     ],
     "workflowPresets": [

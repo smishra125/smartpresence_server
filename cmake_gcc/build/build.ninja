@@ -7,13 +7,13 @@ include CMakeFiles/impl-base.ninja
 
 build slc: phony slc$:base
 
-build smartpresence_gateway: phony base/smartpresence_gateway.out
+build smartpresence_server: phony base/smartpresence_server.out
 
-build smartpresence_gateway.out: phony base/smartpresence_gateway.out
+build smartpresence_server.out: phony base/smartpresence_server.out
 
 
 #############################################
-# Folder: C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_gateway/cmake_gcc/build
+# Folder: C:/Users/smish/SimplicityStudio/v6_workspace/smartpresence_server/cmake_gcc/build
 
 build all: phony all$:base
 

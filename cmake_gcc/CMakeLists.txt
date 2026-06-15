@@ -3,60 +3,60 @@ cmake_minimum_required(VERSION "3.25")
 
 # Project definition
 project(
-	smartpresence_gateway
+	smartpresence_server
 	VERSION 1.0
 	LANGUAGES C CXX ASM
 )
 
-# Include the definition of the slc_smartpresence_gateway target,
+# Include the definition of the slc_smartpresence_server target,
 # which contains the content of the SLC project
-include(smartpresence_gateway.cmake)
+include(smartpresence_server.cmake)
 
-add_executable(smartpresence_gateway
+add_executable(smartpresence_server
     # Add additional sources here
 )
 
-target_include_directories(smartpresence_gateway PUBLIC
+target_include_directories(smartpresence_server PUBLIC
     # Add additional include paths here
 )
 
-target_compile_definitions(smartpresence_gateway PUBLIC
+target_compile_definitions(smartpresence_server PUBLIC
     # Add additional macros here
 )
 
-target_compile_options(smartpresence_gateway PUBLIC
+target_compile_options(smartpresence_server PUBLIC
     # Set additional compiler flags here
 )
 
-target_link_options(smartpresence_gateway PUBLIC
+target_link_options(smartpresence_server PUBLIC
     # Set additional linker flags here
 )
 
 # Link with the content defined in the SLC project
-target_link_libraries(smartpresence_gateway PRIVATE
+target_link_libraries(smartpresence_server PRIVATE
     slc
 )
 
 # Include managed project content if available
-include(smartpresence_gateway_project.cmake OPTIONAL RESULT_VARIABLE managed_project)
+include(smartpresence_server_project.cmake OPTIONAL RESULT_VARIABLE managed_project)
 if(managed_project)
     message(STATUS "Using managed project content from ${managed_project}")
 endif()
 
 # Force the gcc linker command
-set_target_properties(smartpresence_gateway PROPERTIES LINKER_LANGUAGE C)
+set_target_properties(smartpresence_server PROPERTIES LINKER_LANGUAGE C)
 
 # Create .bin, .hex and .s37 artifacts after building the project
-add_custom_command(TARGET smartpresence_gateway
+add_custom_command(TARGET smartpresence_server
     POST_BUILD
-    COMMAND ${CMAKE_OBJCOPY} ${OBJCOPY_SREC_CMD} "$<TARGET_FILE:smartpresence_gateway>" "$<TARGET_FILE_DIR:smartpresence_gateway>/$<TARGET_FILE_BASE_NAME:smartpresence_gateway>.s37"
-    COMMAND ${CMAKE_OBJCOPY} ${OBJCOPY_IHEX_CMD} "$<TARGET_FILE:smartpresence_gateway>" "$<TARGET_FILE_DIR:smartpresence_gateway>/$<TARGET_FILE_BASE_NAME:smartpresence_gateway>.hex"
-    COMMAND ${CMAKE_OBJCOPY} ${OBJCOPY_BIN_CMD}  "$<TARGET_FILE:smartpresence_gateway>" "$<TARGET_FILE_DIR:smartpresence_gateway>/$<TARGET_FILE_BASE_NAME:smartpresence_gateway>.bin" 
+    COMMAND ${CMAKE_OBJCOPY} ${OBJCOPY_SREC_CMD} "$<TARGET_FILE:smartpresence_server>" "$<TARGET_FILE_DIR:smartpresence_server>/$<TARGET_FILE_BASE_NAME:smartpresence_server>.s37"
+    COMMAND ${CMAKE_OBJCOPY} ${OBJCOPY_IHEX_CMD} "$<TARGET_FILE:smartpresence_server>" "$<TARGET_FILE_DIR:smartpresence_server>/$<TARGET_FILE_BASE_NAME:smartpresence_server>.hex"
+    COMMAND ${CMAKE_OBJCOPY} ${OBJCOPY_BIN_CMD}  "$<TARGET_FILE:smartpresence_server>" "$<TARGET_FILE_DIR:smartpresence_server>/$<TARGET_FILE_BASE_NAME:smartpresence_server>.bin" 
 )
 
 # Run post-build pipeline to perform additional post-processing
 if(post_build_command)
-add_custom_command(TARGET smartpresence_gateway
+add_custom_command(TARGET smartpresence_server
     POST_BUILD
     WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/..
     COMMAND ${post_build_command}

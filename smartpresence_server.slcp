@@ -1,6 +1,6 @@
 # Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
-project_name: smartpresence_gateway
-label: smartpresence_gateway
+project_name: smartpresence_server
+label: smartpresence_server
 description: This example demonstrates the Bluetooth Mesh Sensor Server Model and
   Sensor Setup Server Model. It measures temperature and sends the measurement data
   to a remote device (e.g., btmesh_soc_sensor_client).
